@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run OWASP Dependency Check
+        continue-on-error: true
         run: |
           echo $(pwd)
           ./run_check
